@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 public class NextSceneCapture : MonoBehaviour
 {
     public float detectionRange = 5f;
-    public GameObject captureText;
-    public GameObject nextObject;
+
 
     private bool canCapture = false;
 
@@ -25,7 +24,6 @@ public class NextSceneCapture : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canCapture = true;
-            captureText.SetActive(true);
         }
     }
 
@@ -34,7 +32,6 @@ public class NextSceneCapture : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canCapture = false;
-            captureText.SetActive(false);
         }
     }
 
